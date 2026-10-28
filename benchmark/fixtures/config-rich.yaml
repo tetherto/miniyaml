@@ -1,0 +1,276 @@
+app: qvac
+version: "2.0"
+enabled: true
+empty: null
+endpoint: https://example.com:8443/api
+literals:
+  - "true"
+  - "null"
+  - 2026-10-27
+  - "1e3"
+  - yes
+  - on
+multiline: |
+  First line
+  Second line
+services:
+  - name: worker-0
+    replicas: 1
+    timeout: 0.5
+    env:
+      LOG_LEVEL: info
+      API_TOKEN: not-a-real-token
+    ports:
+      - 8000
+      - 9000
+    tags:
+      - api
+      - eu
+      - gpu
+  - name: worker-1
+    replicas: 2
+    timeout: 1.5
+    env:
+      LOG_LEVEL: info
+      API_TOKEN: not-a-real-token
+    ports:
+      - 8001
+      - 9001
+    tags:
+      - api
+      - eu
+      - gpu
+  - name: worker-2
+    replicas: 3
+    timeout: 2.5
+    env:
+      LOG_LEVEL: info
+      API_TOKEN: not-a-real-token
+    ports:
+      - 8002
+      - 9002
+    tags:
+      - api
+      - eu
+      - gpu
+  - name: worker-3
+    replicas: 4
+    timeout: 3.5
+    env:
+      LOG_LEVEL: info
+      API_TOKEN: not-a-real-token
+    ports:
+      - 8003
+      - 9003
+    tags:
+      - api
+      - eu
+      - gpu
+  - name: worker-4
+    replicas: 5
+    timeout: 4.5
+    env:
+      LOG_LEVEL: info
+      API_TOKEN: not-a-real-token
+    ports:
+      - 8004
+      - 9004
+    tags:
+      - api
+      - eu
+      - gpu
+  - name: worker-5
+    replicas: 6
+    timeout: 5.5
+    env:
+      LOG_LEVEL: info
+      API_TOKEN: not-a-real-token
+    ports:
+      - 8005
+      - 9005
+    tags:
+      - api
+      - eu
+      - gpu
+  - name: worker-6
+    replicas: 7
+    timeout: 6.5
+    env:
+      LOG_LEVEL: info
+      API_TOKEN: not-a-real-token
+    ports:
+      - 8006
+      - 9006
+    tags:
+      - api
+      - eu
+      - gpu
+  - name: worker-7
+    replicas: 8
+    timeout: 7.5
+    env:
+      LOG_LEVEL: info
+      API_TOKEN: not-a-real-token
+    ports:
+      - 8007
+      - 9007
+    tags:
+      - api
+      - eu
+      - gpu
+  - name: worker-8
+    replicas: 9
+    timeout: 8.5
+    env:
+      LOG_LEVEL: info
+      API_TOKEN: not-a-real-token
+    ports:
+      - 8008
+      - 9008
+    tags:
+      - api
+      - eu
+      - gpu
+  - name: worker-9
+    replicas: 10
+    timeout: 9.5
+    env:
+      LOG_LEVEL: info
+      API_TOKEN: not-a-real-token
+    ports:
+      - 8009
+      - 9009
+    tags:
+      - api
+      - eu
+      - gpu
+  - name: worker-10
+    replicas: 11
+    timeout: 10.5
+    env:
+      LOG_LEVEL: info
+      API_TOKEN: not-a-real-token
+    ports:
+      - 8010
+      - 9010
+    tags:
+      - api
+      - eu
+      - gpu
+  - name: worker-11
+    replicas: 12
+    timeout: 11.5
+    env:
+      LOG_LEVEL: info
+      API_TOKEN: not-a-real-token
+    ports:
+      - 8011
+      - 9011
+    tags:
+      - api
+      - eu
+      - gpu
+  - name: worker-12
+    replicas: 13
+    timeout: 12.5
+    env:
+      LOG_LEVEL: info
+      API_TOKEN: not-a-real-token
+    ports:
+      - 8012
+      - 9012
+    tags:
+      - api
+      - eu
+      - gpu
+  - name: worker-13
+    replicas: 14
+    timeout: 13.5
+    env:
+      LOG_LEVEL: info
+      API_TOKEN: not-a-real-token
+    ports:
+      - 8013
+      - 9013
+    tags:
+      - api
+      - eu
+      - gpu
+  - name: worker-14
+    replicas: 15
+    timeout: 14.5
+    env:
+      LOG_LEVEL: info
+      API_TOKEN: not-a-real-token
+    ports:
+      - 8014
+      - 9014
+    tags:
+      - api
+      - eu
+      - gpu
+  - name: worker-15
+    replicas: 16
+    timeout: 15.5
+    env:
+      LOG_LEVEL: info
+      API_TOKEN: not-a-real-token
+    ports:
+      - 8015
+      - 9015
+    tags:
+      - api
+      - eu
+      - gpu
+  - name: worker-16
+    replicas: 17
+    timeout: 16.5
+    env:
+      LOG_LEVEL: info
+      API_TOKEN: not-a-real-token
+    ports:
+      - 8016
+      - 9016
+    tags:
+      - api
+      - eu
+      - gpu
+  - name: worker-17
+    replicas: 18
+    timeout: 17.5
+    env:
+      LOG_LEVEL: info
+      API_TOKEN: not-a-real-token
+    ports:
+      - 8017
+      - 9017
+    tags:
+      - api
+      - eu
+      - gpu
+  - name: worker-18
+    replicas: 19
+    timeout: 18.5
+    env:
+      LOG_LEVEL: info
+      API_TOKEN: not-a-real-token
+    ports:
+      - 8018
+      - 9018
+    tags:
+      - api
+      - eu
+      - gpu
+  - name: worker-19
+    replicas: 20
+    timeout: 19.5
+    env:
+      LOG_LEVEL: info
+      API_TOKEN: not-a-real-token
+    ports:
+      - 8019
+      - 9019
+    tags:
+      - api
+      - eu
+      - gpu

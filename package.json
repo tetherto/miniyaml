@@ -1,0 +1,60 @@
+{
+  "name": "miniyaml",
+  "version": "0.1.0",
+  "description": "Small, dependency-free YAML 1.2 Core parse and stringify",
+  "keywords": [
+    "yaml",
+    "parser",
+    "serializer"
+  ],
+  "type": "module",
+  "main": "./lib/index.mjs",
+  "types": "./index.d.ts",
+  "exports": {
+    "./package": "./package.json",
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./lib/index.mjs"
+    }
+  },
+  "files": [
+    "package.json",
+    "lib/index.mjs",
+    "index.d.ts",
+    "LICENSE.md",
+    "NOTICE.md"
+  ],
+  "devDependencies": {
+    "bare-fs": "^4.7.0",
+    "bare-path": "^3.0.0",
+    "brittle": "^4.1.0",
+    "fast-check": "^4.10.2",
+    "lunte": "^1.8.4",
+    "prettier": "^3.9.6",
+    "prettier-config-holepunch": "^2.0.0",
+    "rolldown": "^1.2.14",
+    "typescript": "^6.0.3"
+  },
+  "scripts": {
+    "build": "node support/build.mjs",
+    "prepack": "npm run build",
+    "pretest": "npm run build && tsc --noEmit && node support/yaml-test-suite.mjs",
+    "format": "prettier . --write",
+    "test": "npm run test:node && npm run test:bare",
+    "test:node": "brittle-node test/all.mjs",
+    "test:bare": "brittle-bare test/all.mjs",
+    "test:generate": "brittle-make-test test/all.mjs \"test/*.test.mjs\" && prettier test/all.mjs --write",
+    "bench": "node benchmark/benchmark.mjs",
+    "lint": "prettier . --check && lunte"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tetherto/miniyaml.git"
+  },
+  "author": "Tether Inc",
+  "license": "Apache-2.0 AND MIT",
+  "bugs": {
+    "url": "https://github.com/tetherto/miniyaml/issues"
+  },
+  "homepage": "https://github.com/tetherto/miniyaml"
+}
