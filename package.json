@@ -1,0 +1,43 @@
+{
+  "name": "miniyaml",
+  "version": "0.1.0",
+  "description": "Small, fast YAML 1.2 parse and stringify for Bare and Node",
+  "main": "index.js",
+  "exports": {
+    "./package": "./package.json",
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    }
+  },
+  "files": [
+    "package.json",
+    "index.js",
+    "index.d.ts",
+    "lib"
+  ],
+  "devDependencies": {
+    "brittle": "^4.1.0",
+    "lunte": "^1.8.4",
+    "prettier": "^3.9.6",
+    "prettier-config-holepunch": "^2.0.0"
+  },
+  "scripts": {
+    "format": "prettier . --write",
+    "test": "npm run test:node && npm run test:bare",
+    "test:node": "brittle-node test/all.mjs",
+    "test:bare": "brittle-bare test/all.mjs",
+    "test:generate": "brittle-make-test test/all.mjs test/*.js",
+    "lint": "prettier . --check && lunte"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tetherto/miniyaml.git"
+  },
+  "author": "Tether Inc",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/tetherto/miniyaml/issues"
+  },
+  "homepage": "https://github.com/tetherto/miniyaml"
+}
